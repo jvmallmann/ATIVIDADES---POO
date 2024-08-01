@@ -1,2 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using ATIVIDADES___POO.E1;
+
+Animais.Papagaio meuPapagaio = new Animais.Papagaio("Loro", "Amazona aestiva", "Verde", 2);
+
+Console.WriteLine($"{meuPapagaio.Nome}, um {meuPapagaio.Especie}, com penas {meuPapagaio.CorDasPenas}.");
+meuPapagaio.EmitirSom();
+meuPapagaio.Comer();
+meuPapagaio.Voar();
