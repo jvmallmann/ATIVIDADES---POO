@@ -13,13 +13,13 @@ namespace ATIVIDADES___POO.E1
         private string _especie;
 
 
-
         // Propriedades
         public string Nome
         {
             get { return _nome; }
             set { _nome = value; }
         }
+        
         public string Especie
         {
             get { return _especie; }
@@ -39,8 +39,9 @@ namespace ATIVIDADES___POO.E1
         // Assinaturas
         public void Respirar()
         {
-            Console.WriteLine($"{_nome} está respirando.");
+            Console.WriteLine($"{_nome} esta respirando.");
         }
+        
         public bool Respirar(string nome)
         {
             return true;
@@ -84,6 +85,7 @@ namespace ATIVIDADES___POO.E1
                 get { return _corDasPenas; }
                 set { _corDasPenas = value; }
             }
+            
             public int Idade
             {
                 get { return _idade; }
