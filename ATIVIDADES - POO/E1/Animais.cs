@@ -114,7 +114,7 @@ namespace ATIVIDADES___POO.E1
 
             public override void Comer()
             {
-                Console.WriteLine($"{Nome} esta bicando frutas.");
+                Console.WriteLine($"{Nome} esta comendo frutas.");
             }
         }
     }
