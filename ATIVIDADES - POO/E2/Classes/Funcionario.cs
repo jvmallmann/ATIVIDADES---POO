@@ -22,10 +22,6 @@ namespace ATIVIDADES___POO.E2
             Salario = salario;
         }
 
-        public override string ToString()
-        {
-            return Nome;
-        }
         public void ExibirInformacoes()
         {
             Console.WriteLine($"Nome: {Nome}, Cargo: {Cargo},CPF: {CPF}, Telefone: {Telefone}");
