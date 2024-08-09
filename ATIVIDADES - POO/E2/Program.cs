@@ -1,7 +1,7 @@
 ﻿using ATIVIDADES___POO.E2.interfaces;
 using ATIVIDADES___POO.E2;
 
-var funcionario1 = new Funcionario("Louis C.", "12345444444", "Rua Baixada Mercado", "4912345678", "Recepcionista - 2", 3000);
+var funcionario1 = new Funcionario("Louis C.", "12345444444", "Rua Baixada Mercado", "4912345678", "Recepcionista - 1", 3000);
 
 var funcionario2 = new Funcionario("Sandro C.", "12345444444", "Rua Baixada Mercado", "4912345678", "Porteiro", 3000);
 
