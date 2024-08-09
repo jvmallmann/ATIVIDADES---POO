@@ -1,11 +1,7 @@
 ﻿using ATIVIDADES___POO.E2.interfaces;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace ATIVIDADES___POO.E2.Classes
+namespace ATIVIDADES___POO.E2
 {
     public class Quarto : IQuarto
     {
@@ -24,7 +20,7 @@ namespace ATIVIDADES___POO.E2.Classes
 
         public void ExibirInformacoes()
         {
-            Console.WriteLine($"Número: {Numero}, Tipo: {Tipo}, Preço Base: {PrecoBase:C}, Disponível: {Disponivel}");
+            Console.WriteLine($"Número: {Numero}, Tipo: {Tipo}, Preço Base: {PrecoBase:C}, Disponível: {(Disponivel ? "Sim" : "Não")}");
         }
     }
 }

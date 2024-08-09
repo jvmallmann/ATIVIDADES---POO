@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace ATIVIDADES___POO.E2.interfaces
 {
-    public interface ICliente
+    public interface IPessoa
     {
         string Nome { get; set; }
+        string CPF { get; set; }
+        string Endereco { get; set; }   
         string Telefone { get; set; }
-
     }
 }

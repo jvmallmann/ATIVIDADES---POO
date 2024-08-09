@@ -1,15 +1,20 @@
 ﻿using ATIVIDADES___POO.E2.interfaces;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
-namespace ATIVIDADES___POO.E2.Classes
+namespace ATIVIDADES___POO.E2
 {
     public class Hotel : IHotel
     {
         public string Nome { get; set; }
         public string Endereco { get; set; }
-        public List<IQuarto> Quartos { get; set; }
-        public List<IReserva> Reservas { get; set; }
+        List<IQuarto> IHotel.Quartos { get; set; }
+        List<IReserva> IHotel.Reservas { get; set; }
+
+        private List<IQuarto> Quartos;
+        private List<IReserva> Reservas;
+        private List<IPessoa> pessoas;
 
         public Hotel(string nome, string endereco)
         {
@@ -17,6 +22,7 @@ namespace ATIVIDADES___POO.E2.Classes
             Endereco = endereco;
             Quartos = new List<IQuarto>();
             Reservas = new List<IReserva>();
+            pessoas = new List<IPessoa>();
         }
 
         public void AdicionarQuarto(IQuarto quarto)
@@ -29,27 +35,43 @@ namespace ATIVIDADES___POO.E2.Classes
             Reservas.Add(reserva);
         }
 
+        public void AdicionarPessoa(IPessoa pessoa)
+        {
+            pessoas.Add(pessoa);
+        }
+
+
         public void ExibirInformacoes()
         {
             Console.WriteLine($"Hotel: {Nome}, Endereço: {Endereco}");
             Console.WriteLine("Quartos:");
             foreach (var quarto in Quartos)
             {
-                quarto.ExibirInformacoes(); 
+                quarto.ExibirInformacoes();
             }
             Console.WriteLine("Reservas:");
             foreach (var reserva in Reservas)
             {
-                if (reserva is Reserva reservaConcreta)
+                reserva.ExibirInformacoes();
+            }
+            Console.WriteLine("Pessoas:");
+            foreach (var pessoa in pessoas)
+            {
+                if (pessoa is Funcionario funcionario)
                 {
-                    reservaConcreta.ExibirInformacoes();
+                    funcionario.Trabalhar();
+                    funcionario.ReceberPagamento();
                 }
                 else
                 {
-                    // Lidar com o caso onde reserva não é do tipo esperado
-                    Console.WriteLine("Tipo de reserva desconhecido.");
+                    Console.WriteLine($"Cliente: {pessoa.Nome}");
                 }
             }
+        }
+
+        public IReserva ObterReserva(int idReserva)
+        {
+            throw new NotImplementedException();
         }
     }
 }
