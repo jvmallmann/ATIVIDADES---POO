@@ -5,15 +5,13 @@ namespace ATIVIDADES___POO.E2
 {
     public class Funcionario : IFuncionario
     {
-        // Propriedades com acesso de leitura pública e escrita privada
         public string Nome { get; set; }
         public string CPF { get; set; }
         public string Endereco { get; set; }
         public string Telefone { get; set; }
-        public string Cargo { get;  set; }
-        public decimal Salario { get;  set; }
+        public string Cargo { get; set; }
+        public decimal Salario { get; set; }
 
-        // Construtor
         public Funcionario(string nome, string cpf, string endereco, string telefone, string cargo, decimal salario)
         {
             Nome = nome;
@@ -24,15 +22,9 @@ namespace ATIVIDADES___POO.E2
             Salario = salario;
         }
 
-        // Métodos
-        public void Trabalhar()
+        public override string ToString()
         {
-            Console.WriteLine($"{Nome} está trabalhando como {Cargo}.");
-        }
-
-        public void ReceberPagamento()
-        {
-            Console.WriteLine($"{Nome} recebeu o pagamento de {Salario:C}.");
+            return Nome;
         }
     }
 }

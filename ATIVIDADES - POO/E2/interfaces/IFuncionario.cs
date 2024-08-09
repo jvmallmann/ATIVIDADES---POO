@@ -10,7 +10,6 @@ public interface IFuncionario
     {
         string Cargo { get; set; }
         decimal Salario { get; set; }
-        void Trabalhar();
-        void ReceberPagamento();
+
     }
 }

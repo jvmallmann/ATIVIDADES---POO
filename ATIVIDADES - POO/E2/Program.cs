@@ -10,7 +10,10 @@ Cliente cliente1 = new Cliente("João Vitor M.", "123.456.789-00", "Rua joao kis
 Cliente cliente2 = new Cliente("Juliano H.", "999.999.999-00", "avenida brasil, 1323", "4999999999");
 
 var quarto1 = new Quarto(101, "Solteiro", 150, true);
+
 var quarto2 = new Quarto(102, "Casal", 200, true);
+
+var quarto3 = new Quarto(102, "VIP", 500, false);
 
 var reserva1 = new Reserva(cliente1, quarto1, DateTime.Now, DateTime.Now.AddDays(2), funcionario1);
 
@@ -18,11 +21,15 @@ var reserva2 = new Reserva(cliente2, quarto2, DateTime.Now, DateTime.Now.AddDays
 
 IHotel hotel = new Hotel("Hotel Do Mallmann", "Saudades - AVENIDA");
 
+
 hotel.AdicionarQuarto(quarto1);
 
 hotel.AdicionarQuarto(quarto2);
 
+hotel.AdicionarQuarto(quarto3);
+
 hotel.AdicionarReserva(reserva1);
+
 hotel.AdicionarReserva(reserva2);
 
 hotel.ExibirInformacoes();

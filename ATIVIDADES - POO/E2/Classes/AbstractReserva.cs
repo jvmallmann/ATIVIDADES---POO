@@ -5,11 +5,11 @@ namespace ATIVIDADES___POO.E2
 {
     public abstract class AbstractReserva : IReserva
     {
-        public ICliente Cliente { get;  set; }
-        public IQuarto Quarto { get;  set; }
-        public DateTime DataCheckIn { get;  set; }
-        public DateTime DataCheckOut { get;  set; }
-        public IFuncionario Recepcionista { get;  set; }
+        public ICliente Cliente { get; set; }
+        public IQuarto Quarto { get; set; }
+        public DateTime DataCheckIn { get; set; }
+        public DateTime DataCheckOut { get; set; }
+        public IFuncionario Recepcionista { get; set; }
 
         protected AbstractReserva(ICliente cliente, IQuarto quarto, DateTime dataCheckIn, DateTime dataCheckOut, IFuncionario recepcionista)
         {

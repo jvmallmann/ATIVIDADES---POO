@@ -54,19 +54,7 @@ namespace ATIVIDADES___POO.E2
             {
                 reserva.ExibirInformacoes();
             }
-            Console.WriteLine("Pessoas:");
-            foreach (var pessoa in pessoas)
-            {
-                if (pessoa is Funcionario funcionario)
-                {
-                    funcionario.Trabalhar();
-                    funcionario.ReceberPagamento();
-                }
-                else
-                {
-                    Console.WriteLine($"Cliente: {pessoa.Nome}");
-                }
-            }
+            
         }
 
         public IReserva ObterReserva(int idReserva)
