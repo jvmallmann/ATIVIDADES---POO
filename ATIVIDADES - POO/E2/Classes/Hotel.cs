@@ -35,13 +35,11 @@ namespace ATIVIDADES___POO.E2.Classes
             Console.WriteLine("Quartos:");
             foreach (var quarto in Quartos)
             {
-                quarto.ExibirInformacoes(); // Supondo que ExibirInformacoes está na interface IQuarto
+                quarto.ExibirInformacoes(); 
             }
             Console.WriteLine("Reservas:");
             foreach (var reserva in Reservas)
             {
-                // Se você não pode garantir que reserva é uma Reserva e não apenas IReserva,
-                // você precisa fazer o casting explícito.
                 if (reserva is Reserva reservaConcreta)
                 {
                     reservaConcreta.ExibirInformacoes();
