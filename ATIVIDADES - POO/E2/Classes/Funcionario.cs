@@ -26,5 +26,9 @@ namespace ATIVIDADES___POO.E2
         {
             return Nome;
         }
+        public void ExibirInformacoes()
+        {
+            Console.WriteLine($"Nome: {Nome}, Cargo: {Cargo},CPF: {CPF}, Telefone: {Telefone}");
+        }
     }
 }

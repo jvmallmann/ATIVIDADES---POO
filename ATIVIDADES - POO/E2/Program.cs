@@ -3,6 +3,8 @@ using ATIVIDADES___POO.E2;
 
 var funcionario1 = new Funcionario("Louis C.", "12345444444", "Rua Baixada Mercado", "4912345678", "Recepcionista - 2", 3000);
 
+var funcionario2 = new Funcionario("Sandro C.", "12345444444", "Rua Baixada Mercado", "4912345678", "Porteiro", 3000);
+
 var funcionario3 = new Funcionario("Senna S.", "12345678999", "Rua Brasil Sander, 679", "4987654321", "Recepcionista - 2", 2000);
 
 Cliente cliente1 = new Cliente("João Vitor M.", "123.456.789-00", "Rua joao kist, 1111", "4999999999");
@@ -31,6 +33,12 @@ hotel.AdicionarQuarto(quarto3);
 hotel.AdicionarReserva(reserva1);
 
 hotel.AdicionarReserva(reserva2);
+
+hotel.AdicionarFuncionario(funcionario1);
+
+hotel.AdicionarFuncionario(funcionario2);
+
+hotel.AdicionarFuncionario(funcionario3);
 
 hotel.ExibirInformacoes();
 

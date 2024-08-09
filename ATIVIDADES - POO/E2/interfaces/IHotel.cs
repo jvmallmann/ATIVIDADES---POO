@@ -12,10 +12,12 @@ namespace ATIVIDADES___POO.E2.interfaces
         string Endereco { get; set; }
         List<IQuarto> Quartos { get; set; }
         List<IReserva> Reservas { get; set; }
+        List<IFuncionario> Funcionarios{ get; set; }
 
         void AdicionarQuarto(IQuarto quarto);
         void AdicionarReserva(IReserva reserva);
         IReserva ObterReserva(int idReserva);
         void ExibirInformacoes();
+        void AdicionarFuncionario(IFuncionario funcionario);
     }
 }
