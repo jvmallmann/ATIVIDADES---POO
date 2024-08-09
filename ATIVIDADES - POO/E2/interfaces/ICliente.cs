@@ -8,8 +8,10 @@ namespace ATIVIDADES___POO.E2.interfaces
 {
     public interface ICliente
     {
-        string Nome { get; set; }
-        string Telefone { get; set; }
+        public string Nome { get; set; }
+        public string CPF { get; set; }
+        public string Endereco { get; set; }
+        public string Telefone { get; set; }
 
     }
 }

@@ -16,7 +16,6 @@ namespace ATIVIDADES___POO.E2.interfaces
 
         void AdicionarQuarto(IQuarto quarto);
         void AdicionarReserva(IReserva reserva);
-        IReserva ObterReserva(int idReserva);
         void ExibirInformacoes();
         void AdicionarFuncionario(IFuncionario funcionario);
     }

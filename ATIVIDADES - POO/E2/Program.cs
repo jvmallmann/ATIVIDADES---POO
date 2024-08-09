@@ -23,7 +23,6 @@ var reserva2 = new Reserva(cliente2, quarto2, DateTime.Now, DateTime.Now.AddDays
 
 IHotel hotel = new Hotel("Hotel Do Mallmann", "Saudades - AVENIDA");
 
-
 hotel.AdicionarQuarto(quarto1);
 
 hotel.AdicionarQuarto(quarto2);

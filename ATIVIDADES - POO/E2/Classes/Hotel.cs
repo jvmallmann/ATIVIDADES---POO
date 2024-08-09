@@ -63,10 +63,5 @@ namespace ATIVIDADES___POO.E2
                 reserva.ExibirInformacoes();
             }
         }
-
-        public IReserva ObterReserva(int idReserva)
-        {
-            throw new NotImplementedException();
-        }
     }
 }
