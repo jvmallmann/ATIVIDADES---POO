@@ -9,16 +9,9 @@ namespace ATIVIDADES___POO.E2
     {
         public string Nome { get; set; }
         public string Endereco { get; set; }
-
-        // Implementação das propriedades da interface
-        List<IQuarto> IHotel.Quartos { get; set; }
-        List<IReserva> IHotel.Reservas { get; set; }
-        List<IFuncionario> IHotel.Funcionarios { get; set; }
-
-        // Propriedades privadas para armazenamento
-        private List<IQuarto> Quartos;
-        private List<IReserva> Reservas;
-        private List<IFuncionario> Funcionarios;
+        public List<IQuarto> Quartos { get;  set; }
+        public List<IReserva> Reservas { get;  set; }
+        public List<IFuncionario> Funcionarios { get;  set; }
 
         public Hotel(string nome, string endereco)
         {
