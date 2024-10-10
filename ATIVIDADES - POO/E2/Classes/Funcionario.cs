@@ -10,7 +10,7 @@ namespace ATIVIDADES___POO.E2
         public string Endereco { get; set; }
         public string Telefone { get; set; }
         public string Cargo { get; set; }
-        public decimal Salario { get;  set; }
+        public decimal Salario { get; set; }
 
         public Funcionario(string nome, string cpf, string endereco, string telefone, string cargo, decimal salario)
         {
@@ -24,7 +24,7 @@ namespace ATIVIDADES___POO.E2
 
         public void ExibirInformacoes()
         {
-            Console.WriteLine($"Nome: {Nome}, Cargo: {Cargo},CPF: {CPF}, Telefone: {Telefone}");
+            Console.WriteLine($"Nome: {Nome}, Cargo: {Cargo}, CPF: {CPF}, Telefone: {Telefone}");
         }
     }
 }

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ATIVIDADES___POO.E2.interfaces
 {
@@ -12,11 +8,11 @@ namespace ATIVIDADES___POO.E2.interfaces
         string Endereco { get; set; }
         List<IQuarto> Quartos { get; set; }
         List<IReserva> Reservas { get; set; }
-        List<IFuncionario> Funcionarios{ get; set; }
+        List<IFuncionario> Funcionarios { get; set; }
 
         void AdicionarQuarto(IQuarto quarto);
         void AdicionarReserva(IReserva reserva);
-        void ExibirInformacoes();
         void AdicionarFuncionario(IFuncionario funcionario);
+        void ExibirInformacoes();
     }
 }

@@ -1,7 +1,6 @@
 ﻿using ATIVIDADES___POO.E2.interfaces;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace ATIVIDADES___POO.E2
 {
@@ -9,17 +8,17 @@ namespace ATIVIDADES___POO.E2
     {
         public string Nome { get; set; }
         public string Endereco { get; set; }
-        public List<IQuarto> Quartos { get;  set; }
-        public List<IReserva> Reservas { get;  set; }
-        public List<IFuncionario> Funcionarios { get;  set; }
+        public List<IQuarto> Quartos { get; set; }
+        public List<IReserva> Reservas { get; set; }
+        public List<IFuncionario> Funcionarios { get; set; }
 
-        public Hotel(string nome, string endereco)
+        public Hotel(string nome, string endereco, List<IQuarto> quartos, List<IReserva> reservas, List<IFuncionario> funcionarios)
         {
             Nome = nome;
             Endereco = endereco;
-            Quartos = new List<IQuarto>();
-            Reservas = new List<IReserva>();
-            Funcionarios = new List<IFuncionario>();
+            Quartos = quartos;
+            Reservas = reservas;
+            Funcionarios = funcionarios;
         }
 
         public void AdicionarQuarto(IQuarto quarto)
@@ -41,22 +40,17 @@ namespace ATIVIDADES___POO.E2
         {
             Console.WriteLine($"Hotel: {Nome}, Endereço: {Endereco}");
             Console.WriteLine("\nFuncionários:\n");
-            if (Funcionarios.Count > 0)
+            foreach (var funcionario in Funcionarios)
             {
-                foreach (var funcionario in Funcionarios)
-                {
-                    funcionario.ExibirInformacoes();
-                }
+                funcionario.ExibirInformacoes();
             }
-            else
-            {
-                Console.WriteLine("Nenhum funcionário registrado.");
-            }
+
             Console.WriteLine("\nQuartos:\n");
             foreach (var quarto in Quartos)
             {
                 quarto.ExibirInformacoes();
             }
+
             Console.WriteLine("\nReservas:\n");
             foreach (var reserva in Reservas)
             {

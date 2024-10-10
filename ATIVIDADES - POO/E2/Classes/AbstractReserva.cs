@@ -11,7 +11,7 @@ namespace ATIVIDADES___POO.E2
         public DateTime DataCheckOut { get; set; }
         public IFuncionario Recepcionista { get; set; }
 
-        protected AbstractReserva(ICliente cliente, IQuarto quarto, DateTime dataCheckIn, DateTime dataCheckOut, IFuncionario recepcionista)
+        public AbstractReserva(ICliente cliente, IQuarto quarto, DateTime dataCheckIn, DateTime dataCheckOut, IFuncionario recepcionista)
         {
             Cliente = cliente;
             Quarto = quarto;
@@ -24,7 +24,7 @@ namespace ATIVIDADES___POO.E2
 
         public void ExibirInformacoes()
         {
-            Console.WriteLine($"Cliente: {Cliente.Nome}, Quarto: {Quarto.Numero}, Check-In: {DataCheckIn.ToShortDateString()}, Check-Out: {DataCheckOut.ToShortDateString()}, Valor Total: {CalcularValorTotal():C}, Recepcionista: {Recepcionista}");
+            Console.WriteLine($"Cliente: {Cliente.Nome}, Quarto: {Quarto.Numero}, Check-In: {DataCheckIn.ToShortDateString()}, Check-Out: {DataCheckOut.ToShortDateString()}, Valor Total: {CalcularValorTotal():C}, Recepcionista: {Recepcionista.Nome}");
         }
     }
 }
